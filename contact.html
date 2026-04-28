@@ -1,197 +1,532 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>HighTech Electrical Ltd. </title>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us — Elysian Homes</title>
+    <meta name="description" content="Get in touch with Elysian Homes for quotes or questions about our new builds in Canada.">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+        /* Poppins font — latin-ext */
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; src: url(assets/fonts/poppins-latin-ext-normal-400.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; src: url(assets/fonts/poppins-latin-normal-400.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; src: url(assets/fonts/poppins-latin-ext-normal-500.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; src: url(assets/fonts/poppins-latin-normal-500.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; src: url(assets/fonts/poppins-latin-ext-normal-600.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; src: url(assets/fonts/poppins-latin-normal-600.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; src: url(assets/fonts/poppins-latin-ext-normal-700.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; src: url(assets/fonts/poppins-latin-normal-700.woff2) format('woff2'); }
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+        /* FontAwesome */
+        @font-face {
+            font-family: FontAwesome;
+            src: url(assets/fonts/fontawesome-webfont-674f50d287a8c48dc19ba404d20fe713.eot);
+            src: url(assets/fonts/fontawesome-webfont-674f50d287a8c48dc19ba404d20fe713.eot?) format("embedded-opentype"),
+                 url(assets/fonts/fontawesome-webfont-fee66e712a8a08eef5805a46892932ad.woff) format("woff"),
+                 url(assets/fonts/fontawesome-webfont-912ec66d7572ff821749319396470bde.svg) format("svg");
+            font-weight: 400;
+            font-style: normal;
+        }
 
-    <link rel="stylesheet" href="css/aos.css">
+        /* Reset & base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+        html { font-size: 16px; scroll-behavior: smooth; }
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #444;
+            background: #fff;
+            line-height: 1.6;
+        }
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <div class="logo-image">
-            <img src="./images/logo.png" style="width:80px;height: 80px;" class="img-fluid">
-            <div style="color:rgb(176, 188, 240);padding-top:0.5em;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><h6> Licensed, Insured, Bonded</h6> </div> 
-          </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
-        </button>
-  
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item cta"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="portfolio.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-                  <a class="dropdown-item" href="portfolio-single.html">Portfolio Single</a>
+        a { text-decoration: none; color: inherit; }
+
+        /* ── NAV ── */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #111;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #444;
+            letter-spacing: 0.3px;
+            transition: color 0.15s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -3px;
+            width: 0; height: 1px;
+            background: #111;
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover { color: #111; }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-links .nav-cta a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #020402;
+            border-radius: 2px;
+            padding: 8px 22px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #020402;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .nav-links .nav-cta a::after { display: none; }
+
+        .nav-links .nav-cta a:hover {
+            background: #020402;
+            color: #fff;
+        }
+
+        .nav-links .nav-cta a.active-page {
+            background: #020402;
+            color: #fff;
+        }
+
+        /* Mobile nav toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #111;
+            transition: all 0.2s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: flex; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                border-top: 1px solid #e8e8e8;
+                padding: 8px 0;
+            }
+
+            .nav-links.is-open { display: flex; }
+
+            .nav-links li { width: 100%; }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+
+            .nav-links a::after { display: none; }
+
+            .nav-links .nav-cta a {
+                margin: 12px 24px;
+                width: calc(100% - 48px);
+                justify-content: center;
+            }
+        }
+
+        /* ── MAIN LAYOUT ── */
+        main { padding-top: 68px; }
+
+        /* ── HERO / CONTACT SECTION ── */
+        .contact-hero {
+            background: #f9f8f7;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+
+        .contact-hero__eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #ff5268;
+            margin-bottom: 10px;
+        }
+
+        .contact-hero__title {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            color: #111;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .contact-hero__desc {
+            max-width: 580px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ── CONTACT CARD ── */
+        .contact-card-wrap {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .contact-card__icon {
+            width: 56px;
+            height: 56px;
+            background: #fff0f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .contact-card__icon svg {
+            width: 26px;
+            height: 26px;
+            fill: #ff5268;
+        }
+
+        .contact-card__label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .contact-card__heading {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .contact-card__sub {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .contact-card__email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            border: 2px solid #020402;
+            border-radius: 2px;
+            padding: 12px 28px;
+            letter-spacing: 0.3px;
+            transition: all 0.15s ease-in-out;
+            text-decoration: none;
+        }
+
+        .contact-card__email:hover {
+            background: #020402;
+            color: #fff;
+        }
+
+        .contact-card__email svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* ── WHY SECTION ── */
+        .why-section {
+            padding: 80px 24px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #ff5268;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 48px;
+        }
+
+        .why-grid {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .why-grid { grid-template-columns: 1fr; gap: 24px; }
+        }
+
+        .why-card {
+            padding: 32px 24px;
+            background: #f9f8f7;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .why-card__icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: #ff5268;
+            line-height: 1;
+        }
+
+        .why-card__title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .why-card__text {
+            font-size: 0.875rem;
+            color: #666;
+            line-height: 1.65;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: #1e1e1e;
+            color: #ccc;
+            padding: 48px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-nav a {
+            font-size: 0.85rem;
+            color: #aaa;
+            transition: color 0.15s;
+        }
+
+        .footer-nav a:hover { color: #fff; }
+
+        .footer-credit {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .footer-credit a {
+            color: #888;
+            transition: color 0.15s;
+        }
+
+        .footer-credit a:hover { color: #ccc; }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="index.html">Elysian Homes</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li class="nav-cta"><a href="contact.html" class="active-page">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="contact-hero">
+            <p class="contact-hero__eyebrow">Get in touch</p>
+            <h1 class="contact-hero__title">Elysian Homes</h1>
+            <p class="contact-hero__desc">
+                Your trusted partner for stylish new builds across Canada.
+            </p>
+
+            <div class="contact-card-wrap">
+                <div class="contact-card">
+                    <div class="contact-card__icon">
+                        <!-- envelope icon -->
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <p class="contact-card__label">Email us</p>
+                    <h2 class="contact-card__heading">Quotes &amp; Questions</h2>
+                    <p class="contact-card__sub">We'd love to hear from you.</p>
+                    <a class="contact-card__email" href="mailto:0010ltd@gmail.com">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        0010ltd@gmail.com
+                    </a>
                 </div>
-            </li> -->
-            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-            <li class="nav-item"><a href="contact.html" class="nav-link"><span>Get in touch</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- END nav -->
-    
-    <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
-      <div id="particles-js"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Contact</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <section class="ftco-section contact-section ftco-degree-bg">
-      <div class="container bg-light">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h4">Contact Information</h2>
-          </div>
-          <div class="w-100">
-          <div class="col-md-3">
-          </div>
-          <div class="col-md">
-            <p><span>Email:</span> <a href="mailto:info@elysianhome.ca">info@elysianhome.ca</a></p>
-          </div>
-        </div>
-          <!-- <div class="col-md-3">
-            <p><span>Email</span> <a href="mailto:Hightechltd@yahoo.com">hightechltd@yahoo.com</a></p>
-          </div> -->
-        </div>
-        <div class="row block-9">
-          <div class="col-md-6 pr-md-5">
-            <form action="https://submit-form.com/53vQtLU9" method="POST">
-              <div class="form-group">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message"  class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
-<!-- 
-          <div class="col-md-6" id="map"></div> -->
-        </div>
-      </div>
-    </section>
-    
+            </div>
+        </section>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">HighTech Ltd.</h2>
-              <p>Send us the mail with the requirements or queries, we will be happy to respond within an hour. Feel free to contact us via phone number.</p>
+        <!-- WHY ELYSIAN -->
+        <section class="why-section">
+            <p class="section-label">Why Elysian Homes</p>
+            <h2 class="section-title">Built on trust, delivered with care</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card__icon">&#9679;</div>
+                    <h3 class="why-card__title">Trusted Builder</h3>
+                    <p class="why-card__text">
+                        Years of experience delivering modern, beautifully designed homes
+                        built to Canadian standards and beyond.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">&#9679;</div>
+                    <h3 class="why-card__title">Transparent Process</h3>
+                    <p class="why-card__text">
+                        Clear communication from the first consultation to the moment
+                        you receive your keys — no surprises.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon">&#9679;</div>
+                    <h3 class="why-card__title">Quick Response</h3>
+                    <p class="why-card__text">
+                        We respond to all enquiries promptly. Send us an email and
+                        expect to hear back within one business day.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-5">
-              <h2 class="ftco-heading-2">Quick Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="index.html" class="py-2 d-block">Home</a></li>
-                <li><a href="gallery.html" class="py-2 d-block">Gallery</a></li>
-                <li><a href="services.html" class="py-2 d-block">Services</a></li>
-                <!-- <li><a href="#" class="py-2 d-block">Portfolio</a></li> -->
-                <li><a href="about.html" class="py-2 d-block">About</a></li>
-                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Contact Information</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">info@elysianhome.ca</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <!-- <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul> -->
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+        </section>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Elysian Home</span>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="footer-credit">
+                <a href="https://www.linkedin.com/in/mandeep-bawa/" rel="nofollow noopener noreferrer" target="_blank">
+                    Web design by Mandeep
+                </a>
+            </p>
         </div>
-      </div>
     </footer>
-    
-  
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <script>
+        $('#nav-toggle').on('click', function () {
+            $('#nav-links').toggleClass('is-open');
+        });
+    </script>
 
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/particles.min.js"></script>
-  <script src="js/particle.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+</body>
 </html>
